@@ -11,7 +11,7 @@ const ExpensesList = () => {
         <div className="m-auto" key={expense._id}>
           <p>{expense.title}</p>
           <p>{convertCentsToEuros(expense.amount)}</p>
-          <p>{format(new Date(expense.date), "dd/MM/yyyy")}</p>
+          <p>{format(new Date(expense.date), "PP")}</p>
         </div>
       ))}
     </>

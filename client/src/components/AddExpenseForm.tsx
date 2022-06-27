@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAddExpenseMutation } from "../features/api/apiSlice";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import { DayPicker } from "react-day-picker";
+import "react-day-picker/dist/style.css";
 
 interface ExpenseForm {
   title: string;
@@ -22,22 +22,20 @@ const AddExpenseForm = () => {
 
   return (
     <div>
-      Title:
       <input
         type="text"
         value={form.title}
         onChange={(e) => setForm({ ...form, title: e.target.value })}
       />
-      Amount:
       <input
         type="number"
         value={form.amount}
         onChange={(e) => setForm({ ...form, amount: Number(e.target.value) })}
       />
-      Date:
-      <DatePicker
+      <DayPicker
+        mode="single"
         selected={form.date}
-        onChange={(date: Date) => setForm({ ...form, date: date })}
+        onSelect={(day, date: Date) => setForm({ ...form, date })}
       />
       <button onClick={() => handleClick(form)}>Add</button>
     </div>
