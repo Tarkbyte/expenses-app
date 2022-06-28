@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { format } from "date-fns";
 import { useAddExpenseMutation } from "../features/api/apiSlice";
+import { PlusIcon } from "@heroicons/react/outline";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-import { format } from "date-fns";
 
 interface ExpenseForm {
   title: string;
@@ -60,7 +61,7 @@ const AddExpenseForm = () => {
         className="bg-emerald-400 font-black text-white py-2 rounded-xl"
         onClick={() => handleClick(form)}
       >
-        Add
+        <PlusIcon className="w-5 h-5 text-white m-auto" />
       </button>
     </div>
   );

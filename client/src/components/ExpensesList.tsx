@@ -19,7 +19,7 @@ const ExpensesList = () => {
   };
 
   return (
-    <div className="pr-5">
+    <div className="mr-10">
       {expenses?.map((expense) => (
         <div
           key={expense._id}
