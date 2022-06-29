@@ -57,7 +57,9 @@ const AddExpenseForm = () => {
         selected={form.date}
         onSelect={(day, date: Date) => setForm({ ...form, date })}
       />
-      <p>You picked: {format(form.date, "PP")}</p>
+      <p className="text-sm font-bold">
+        Date selected: {format(form.date, "PP")}
+      </p>
       <button
         className="bg-emerald-400 font-black text-white py-2 rounded-xl"
         onClick={() => handleClick(form)}
