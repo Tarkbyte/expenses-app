@@ -6,3 +6,16 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1062%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%23SvgjsLinearGradient1063)'%3e%3c/rect%3e%3cpath d='M2235.89 820.14C2033.86 815.68 1929.58 582.8 1477.91 539.34 1026.25 495.88 975.23-124.18 719.94-177.89' stroke='rgba(255%2c 255%2c 255%2c 0.4)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1938.15 173.88C1682.33 193.76 1504.96 704.19 1058.75 703.08 612.54 701.97 475.67-67.51 179.35-129.99' stroke='rgba(255%2c 255%2c 255%2c 0.4)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2276.99 701.2C2073.26 667.97 2005.29 195.36 1643.2 172 1281.12 148.64 1173.97-4.04 1009.42-5.71' stroke='rgba(255%2c 255%2c 255%2c 0.4)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2062.56 449.43C1879.17 454.91 1676.72 750.27 1384.53 730.23 1092.35 710.19 1213.65 27.35 1045.52-131.95' stroke='rgba(255%2c 255%2c 255%2c 0.4)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2163.75 865.65C2024.95 855.61 2021.12 672.19 1683.13 584.85 1345.15 497.51 1399.97-52.62 1202.52-147.17' stroke='rgba(255%2c 255%2c 255%2c 0.4)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1062'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='10.94%25' y1='-19.44%25' x2='89.06%25' y2='119.44%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1063'%3e%3cstop stop-color='rgba(153%2c 246%2c 228%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(217%2c 249%2c 157%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
   background-repeat: no-repeat;
 }
+
+:root {
+  --rdp-cell-size: 35px;
+  --rdp-accent-color: #34d399;
+  --rdp-background-color: transparent;
+  /* Switch to dark colors for dark themes */
+  --rdp-accent-color-dark: #34d399;
+  --rdp-background-color-dark: #047857;
+  /* Outline border for focused elements */
+  --rdp-outline: none;
+  /* Outline border for focused and selected elements */
+  --rdp-outline-selected: 2px solid var(--rdp-accent-color);
+}
