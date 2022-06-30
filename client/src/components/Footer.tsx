@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex justify-between items-center">
         <div>
           <p className="text-xs">
-            Watch the source code on{" "}
+            See the source code on{" "}
             <a
               href="https://github.com/Tarkbyte/expenses-app"
               target="_blank"
