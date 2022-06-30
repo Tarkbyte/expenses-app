@@ -24,20 +24,17 @@ const ExpensesList = (props: Props) => {
   };
 
   return (
-    <div className="mr-10 mt-5">
+    <div className="mr-10 mt-8">
       {expenses?.map((expense) => (
         <div
           key={expense._id}
           className="rounded-xl shadow-md my-2 bg-white p-3 space-y-1"
         >
           <div className="flex justify-between items-center">
-            <p className="text-xl font-bold text-neutral-400">
+            <p className="text-xl font-bold text-neutral-400 lowercase">
               {expense.title}
             </p>
             <div className="flex items-center">
-              <button>
-                <PencilAltIcon className="w-5 h-5 text-orange-300 mr-1" />
-              </button>
               <button onClick={() => handleDeleteExpense(expense._id)}>
                 <TrashIcon className="w-5 h-5 text-red-400" />
               </button>

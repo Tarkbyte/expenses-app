@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import ExpensesList from "./components/ExpensesList";
 import AddExpenseForm from "./components/AddExpenseForm";
 import Toggle from "./components/Toggle";
 
 const App = () => {
-  const [enabled, setEnabled] = useState(false);
+  const currency = localStorage.getItem("currency") === "true";
+
+  const [enabled, setEnabled] = useState<boolean>(currency);
+
+  useEffect(() => {
+    localStorage.setItem("currency", JSON.stringify(enabled));
+  }, [enabled]);
 
   return (
     <div className="App">
@@ -14,7 +20,7 @@ const App = () => {
           <div className="w-full">
             <div className="flex justify-between items-center">
               <p className="font-black uppercase">
-                Your expenses will appear here:
+                Your expenses will appear below:
               </p>
               <Toggle enabled={enabled} setEnabled={setEnabled} />
             </div>
