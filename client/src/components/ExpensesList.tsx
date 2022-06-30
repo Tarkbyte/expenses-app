@@ -4,13 +4,18 @@ import {
 } from "../features/api/apiSlice";
 import { format } from "date-fns";
 import {
-  CashIcon,
+  CurrencyEuroIcon,
+  CurrencyDollarIcon,
   CalendarIcon,
   TrashIcon,
   PencilAltIcon,
 } from "@heroicons/react/outline";
 
-const ExpensesList = () => {
+interface Props {
+  enabled: boolean;
+}
+
+const ExpensesList = (props: Props) => {
   const { data: expenses } = useGetExpensesQuery();
   const [deleteExpense] = useDeleteExpenseMutation();
 
@@ -19,7 +24,7 @@ const ExpensesList = () => {
   };
 
   return (
-    <div className="mr-10">
+    <div className="mr-10 mt-5">
       {expenses?.map((expense) => (
         <div
           key={expense._id}
@@ -39,7 +44,12 @@ const ExpensesList = () => {
             </div>
           </div>
           <div className="flex items-center">
-            <CashIcon className="w-5 h-5 text-emerald-400 mr-1" />
+            {props.enabled ? (
+              <CurrencyEuroIcon className="w-5 h-5 text-lime-400 mr-1" />
+            ) : (
+              <CurrencyDollarIcon className="w-5 h-5 text-emerald-400 mr-1" />
+            )}
+
             {expense.amount}
           </div>
           <div className="flex items-center">
