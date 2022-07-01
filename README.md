@@ -27,7 +27,7 @@ The `VITE_API_URL` is the Node API where you will do the requests, keep in mind 
 
 # Starting the app
 
-From a terminal, go to the `backend` folder and execute the following command and don't close it: `npm run dev`
+From a terminal, go to the `backend` folder, execute the following command and don't close the terminal: `npm run dev`
 
 You must repeat this process for the `client` folder: `npm run dev`
 
