@@ -34,7 +34,7 @@ const AddExpenseForm = () => {
 
   return (
     <div className="flex flex-col space-y-4">
-      <h4>Add an expense:</h4>
+      <h4 className="font-bold uppercase">Add an expense:</h4>
       {error && <p className="bg-red-500 text-white p-1 text-sm">{error}</p>}
       <input
         className="rounded-xl p-2 outline-emerald-400"

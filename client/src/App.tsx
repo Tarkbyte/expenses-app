@@ -21,7 +21,7 @@ const App = () => {
           <div className="flex justify-between border-b-2 border-emerald-400 pb-10">
             <div className="w-full">
               <div className="flex justify-between items-center">
-                <p className="font-black uppercase">
+                <p className="font-bold uppercase">
                   Your expenses will appear below:
                 </p>
                 <Toggle enabled={enabled} setEnabled={setEnabled} />
