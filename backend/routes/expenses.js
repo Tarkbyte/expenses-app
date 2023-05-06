@@ -18,7 +18,7 @@ router.get("/:id", getExpense);
 // Store an expensee
 router.post("/", createExpense);
 
-// Delete an expense
+// Update an expense
 router.patch("/:id", updateExpense);
 
 // Delete an expense
